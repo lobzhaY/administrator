@@ -1,0 +1,74 @@
+@use './typography';
+@use './colors';
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  font-size: calc(100vw / 1920 * 10);
+
+  @media (max-width: 1200px) {
+    font-size: calc(100vw / 1024 * 10);
+  }
+
+  @media (max-width: 1024px) {
+    font-size: calc(100vw / 768 * 10);
+  }
+
+  @media (max-width: 767px) {
+    font-size: calc(100vw / 567 * 10);
+  }
+
+  @media (max-width: 566px) {
+    font-size: calc(100vw / 375 * 10);
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+input,
+button,
+select,
+textarea,
+optgroup,
+option {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  font-style: inherit;
+  color: inherit;
+}
+
+a:visited {
+  color: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: typography.$font-family-0;
+  line-height: typography.$line-height;
+  color: colors.$color-4-0;
+  font-weight: typography.$font-weight-1;
+  font-size: typography.$font-size-1;
+  background-color: colors.$color-5-3;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
