@@ -1,0 +1,58 @@
+@use '../../../../styles/colors';
+@use '../../../../styles/mixins';
+@use '../../../../styles/typography';
+
+.headerWrapper {
+    width: 30rem;
+    height: 100%;
+
+    background-color: colors.$color-0-1;
+
+    padding: 2rem 1rem;
+
+    @include mixins.display-column(1rem, center, space-between)
+}
+
+.nav {
+    @include mixins.display-column(1rem, center);
+    width: 100%;
+}
+
+.logoWrapper {
+    width: 20rem;
+    height: 20rem;
+
+    img {
+        width: 100%;
+        height: 100%;
+
+        object-fit: contain;
+        object-position: center;
+    }
+}
+
+.logoutWrapper {
+    width: 100%;
+
+    button {
+        width: 100%;
+        padding: 2rem 1.2rem;
+
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+
+        @include mixins.display-row(center, center);
+        @include mixins.font-header(typography.$font-size-2, typography.$font-weight-3);
+
+        &:hover {
+            color: #fff;
+        }
+    } 
+}
+
+ul {
+    @include mixins.display-column(1rem, center);
+    width: 100%;
+    padding: 0;
+}

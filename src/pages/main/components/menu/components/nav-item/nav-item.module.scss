@@ -1,0 +1,26 @@
+@use '../../../../../../styles/mixins';
+@use '../../../../../../styles/colors';
+@use '../../../../../../styles//typography';
+
+.navItemWrapper {
+    width: 100%;
+
+    @include mixins.font-header(typography.$font-size-3);
+    
+    a {
+        text-decoration: none;
+    }
+
+    padding: 2rem 1.2rem;
+
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    @include mixins.display-row(center, center);
+    @include mixins.font-header(typography.$font-size-2, typography.$font-weight-3);
+
+    &:hover {
+        color: #fff;
+    }
+}
