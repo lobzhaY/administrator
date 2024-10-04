@@ -1,0 +1,14 @@
+@use '../../styles/mixins';
+@use '../../styles/colors';
+@use '../../styles/typography';
+
+.dummyWrapper {
+    width: 100%;
+    height: 100%;
+
+    @include mixins.display-center;
+
+    h3 {
+        @include mixins.font-header(typography.$font-size-6, typography.$font-weight-4, colors.$color-0-1);
+    }
+}

@@ -1,0 +1,31 @@
+@use '../../../../../../styles/colors';
+@use '../../../../../../styles/mixins';
+@use '../../../../../../styles/typography';
+
+.itemWrapper {
+    width: 100%;
+    height: 25rem;
+
+    padding: 3.5rem 2.5rem;
+    background-color: colors.$color-5-0;
+
+    @include mixins.display-column(1rem, center, space-between);
+}
+
+.itemContent {
+    @include mixins.display-column(2rem, center, flex-start);
+
+    h2 {
+        @include mixins.font-header(typography.$font-size-6, typography.$font-weight-4, $color: colors.$color-0-0);
+    }
+
+    p {
+        max-height: 7rem;
+        @include mixins.font-text(typography.$font-size-3, colors.$color-4-0);
+    }
+}
+
+.itemActions {
+    width: 100%;
+    @include mixins.display-row(flex-end, center, 1rem);
+}

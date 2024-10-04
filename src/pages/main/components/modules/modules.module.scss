@@ -1,0 +1,42 @@
+@use '../../../../styles/mixins';
+@use '../../../../styles/colors';
+@use '../../../../styles/typography';
+
+.modulesWrapper {
+    width: 100%;
+    height: 100%;
+
+    padding: 2.5rem 4rem;
+
+    @include mixins.display-column(3rem);
+}  
+
+.modulesHeader {
+    width: 100%;
+
+    @include mixins.display-row(space-between, center);
+
+    h1 {
+        @include mixins.font-header(typography.$font-size-6, typography.$font-weight-4, colors.$color-0-1);
+    }
+
+    button {
+        background-color: colors.$color-0-1;
+        border-color: colors.$color-0-2;
+        padding: 2rem 2.5rem;
+
+        @include mixins.font-header(typography.$font-size-5, typography.$font-weight-3);
+    }
+}
+
+.modulesContainer {
+    width: 100%;
+    height: 100%;
+}
+
+.allModulesWrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+}

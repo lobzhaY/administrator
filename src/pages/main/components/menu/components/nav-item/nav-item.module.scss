@@ -18,7 +18,7 @@
     cursor: pointer;
 
     @include mixins.display-row(center, center);
-    @include mixins.font-header(typography.$font-size-2, typography.$font-weight-3);
+    @include mixins.font-header(typography.$font-size-4, typography.$font-weight-3);
 
     &:hover {
         color: #fff;

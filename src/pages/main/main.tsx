@@ -6,7 +6,7 @@ export const MainPage: React.FC = () => {
   return (
     <main className={styles.mainWrapper}>
       <Menu />
-      <div>
+      <div className={styles.mainContainer}>
         <Outlet />
       </div>
     </main>
